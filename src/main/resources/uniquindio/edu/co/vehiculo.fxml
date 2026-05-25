@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uniquindio.edu.co.viewcontroller.VehiculoController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+
+   <HBox spacing="20.0" alignment="CENTER_LEFT">
+      <Button text="← Volver al Menú" onAction="#volverMenu" />
+      <Label text="Gestión de Vehículos">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </HBox>
+
+   <Separator />
+
+   <HBox spacing="20.0">
+      <!-- Sección de Ingreso -->
+      <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+         <Label text="Registrar Ingreso">
+            <font><Font name="System Bold" size="14.0" /></font>
+         </Label>
+         <TextField fx:id="txtPlacaIngreso" promptText="Placa (ej. ABC-123)" />
+         <ComboBox fx:id="cbTipoVehiculo" promptText="Tipo de Vehículo" prefWidth="200.0" />
+         <TextField fx:id="txtNombreConductor" promptText="Nombre del Conductor" />
+         <TextField fx:id="txtIdentificacionConductor" promptText="Identificación" />
+         <Button text="Ingresar Vehículo" onAction="#registrarIngreso" />
+      </VBox>
+
+      <Separator orientation="VERTICAL" />
+
+      <!-- Sección de Salida -->
+      <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+         <Label text="Registrar Salida">
+            <font><Font name="System Bold" size="14.0" /></font>
+         </Label>
+         <TextField fx:id="txtPlacaSalida" promptText="Buscar placa para salida" />
+         <Button text="Registrar Salida y Cobrar" onAction="#registrarSalida" />
+      </VBox>
+   </HBox>
+
+   <Separator />
+
+   <!-- Tabla de vehículos adentro -->
+   <Label text="Vehículos en Parqueadero">
+      <font><Font name="System Bold" size="14.0" /></font>
+   </Label>
+   <TableView fx:id="tablaVehiculos" prefHeight="200.0">
+     <columns>
+       <TableColumn fx:id="colPlaca" prefWidth="150.0" text="Placa" />
+       <TableColumn fx:id="colTipo" prefWidth="150.0" text="Tipo" />
+       <TableColumn fx:id="colHoraIngreso" prefWidth="150.0" text="Hora Ingreso" />
+     </columns>
+   </TableView>
+
+</VBox>

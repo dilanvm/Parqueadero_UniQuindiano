@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uniquindio.edu.co.viewcontroller.EspacioController">
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+
+   <HBox spacing="20.0" alignment="CENTER_LEFT">
+      <Button text="← Volver" onAction="#volverMenu" />
+      <Label text="Gestión de Espacios">
+         <font><Font name="System Bold" size="18.0" /></font>
+      </Label>
+   </HBox>
+
+   <Separator />
+
+   <VBox spacing="10.0" maxWidth="300.0" alignment="CENTER_LEFT">
+      <Label text="Crear Nuevo Espacio">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <TextField fx:id="txtCodigoEspacio" promptText="Código (ej. C3, M2)" />
+      <ComboBox fx:id="cbTipoEspacio" promptText="Tipo de Vehículo Permitido" prefWidth="300.0" />
+      <Button text="Agregar Espacio" onAction="#agregarEspacio" prefWidth="300.0" />
+   </VBox>
+
+   <Separator />
+
+   <VBox spacing="10.0" maxWidth="300.0" alignment="CENTER_LEFT">
+      <Label text="Consulta de Espacios">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <Label fx:id="lblTotal" text="Total de espacios: -" />
+      <Label fx:id="lblOcupados" text="Espacios ocupados: -" />
+      <Label fx:id="lblDisponibles" text="Espacios disponibles: -" />
+      <Button text="Actualizar Consulta" onAction="#consultarEspacios" prefWidth="300.0" />
+   </VBox>
+
+</VBox>

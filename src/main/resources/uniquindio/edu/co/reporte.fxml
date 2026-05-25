@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uniquindio.edu.co.viewcontroller.ReporteController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <HBox spacing="20.0" alignment="CENTER_LEFT">
+        <Button text="← Volver" onAction="#volverMenu" />
+        <Label text="Reportes del Sistema">
+            <font><Font name="System Bold" size="18.0" /></font>
+        </Label>
+    </HBox>
+
+    <Separator />
+
+    <VBox spacing="10.0" maxWidth="400.0" alignment="CENTER_LEFT">
+        <Label text="Resumen General">
+            <font><Font name="System Bold" size="14.0" /></font>
+        </Label>
+        <Label fx:id="lblVehiculosHoy" text="Vehículos ingresados hoy: -" />
+        <Label fx:id="lblIngresos" text="Ingresos generados: -" />
+        <Label fx:id="lblPromedio" text="Tiempo promedio de permanencia: -" />
+    </VBox>
+
+    <Separator />
+
+    <VBox spacing="10.0" maxWidth="400.0" alignment="CENTER_LEFT">
+        <Label text="Vehículos con permanencia mayor a:">
+            <font><Font name="System Bold" size="14.0" /></font>
+        </Label>
+        <HBox spacing="10.0" alignment="CENTER_LEFT">
+            <TextField fx:id="txtMinutos" promptText="Minutos" prefWidth="150.0" />
+            <Button text="Buscar" onAction="#buscarPorTiempo" />
+        </HBox>
+        <Label fx:id="lblResultadoTiempo" text="" />
+    </VBox>
+
+    <Button text="Actualizar Reporte" onAction="#actualizarReporte" prefWidth="300.0" />
+
+</VBox>
