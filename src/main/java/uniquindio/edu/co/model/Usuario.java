@@ -76,7 +76,7 @@ public abstract class Usuario {
     }
 
     /**
-     * Método abstracto para obtener el porcentaje de descuento aplicable al usuario.
+     * Metodo abstracto para obtener el porcentaje de descuento aplicable al usuario.
      * Es implementado por las clases hijas usando polimorfismo.
      * @return El porcentaje de descuento (ej. 0.20 para 20%).
      */

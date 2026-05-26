@@ -12,9 +12,6 @@ public class Administrativo extends Usuario {
         super(nombre, identificacion, "ADMINISTRATIVO");
     }
 
-    /**
-     * Los administrativos tienen un 5% de descuento.
-     */
     @Override
     public double obtenerDescuento() {
         return 0.05;
